@@ -4,8 +4,6 @@ class AuthorsController < ApplicationController
   # GET /authors
   def index
     @authors = Author.all
-    @survey = Survey.all where author_id....
-    @reply_groups = ReplyGroups.all 
   end
 
   # GET /authors/1
