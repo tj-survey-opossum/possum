@@ -13,6 +13,14 @@
 
 ActiveRecord::Schema.define(version: 20151008191631) do
 
+  create_table "authors", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "password_digest"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
   create_table "questions", force: :cascade do |t|
     t.integer  "survey_id"
     t.string   "question_type"
@@ -28,11 +36,13 @@ ActiveRecord::Schema.define(version: 20151008191631) do
     t.datetime "updated_at",     null: false
   end
 
-  create_table "responses", force: :cascade do |t|
-    t.integer  "question_id"
-    t.string   "question_response"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+  create_table "surveys", force: :cascade do |t|
+    t.integer  "author_id"
+    t.string   "title"
+    t.string   "description"
+    t.boolean  "published"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end
