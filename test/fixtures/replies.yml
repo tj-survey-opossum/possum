@@ -2,8 +2,8 @@
 
 one:
   question_id: 1
-  question_response: MyString
+  question_reply: MyString
 
 two:
   question_id: 1
-  question_response: MyString
+  question_reply: MyString
