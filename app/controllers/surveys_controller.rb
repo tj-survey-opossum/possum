@@ -15,11 +15,13 @@ class SurveysController < ApplicationController
     @survey = Survey.new
     @survey.questions.build
     @options = Question.type_names
+    @survey.author = Author.find(params[:format])
   end
 
   # GET /surveys/1/edit
   def edit
     @survey.questions.build
+    @options = Question.type_names
   end
 
   # POST /surveys

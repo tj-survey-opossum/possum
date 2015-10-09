@@ -26,14 +26,14 @@
 
   <%= f.fields_for :questions do |ff| %>
     <div>
-      <div class="subfield">
-        <%= ff.label :question_type %><br>
-        <%= ff.select :question_type, @options %>
-      </div>
-      <div class="subfield">
-        <%= ff.label :prompt %><br>
+      <span class="subfield">
+        <%= ff.label :question_type %>:
+        <%= ff.select :question_type, @options %> |
+      </span>
+      <span class="subfield">
+        <%= ff.label :prompt %>:
         <%= ff.text_field :prompt %>
-      </div>
+      <span>
     </div>
   <% end %>
   <div class="actions">
