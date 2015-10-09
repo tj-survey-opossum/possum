@@ -12,6 +12,7 @@
     </div>
   <% end %>
 
+<<<<<<< HEAD
 
 
 
@@ -19,6 +20,10 @@
     <%= f.label :author_id %><br>
     <%= f.number_field :author_id %>
   </div>
+=======
+  <%= f.hidden_field :author_id %>
+
+>>>>>>> 4a3b032f492014fecc71b7267de3aa2116564230
   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
@@ -27,10 +32,21 @@
     <%= f.label :description %><br>
     <%= f.text_field :description %>
   </div>
-  <div class="field">
-    <%= f.label :published %><br>
-    <%= f.check_box :published %>
-  </div>
+
+  <h1> Questions </h1>
+
+  <%= f.fields_for :questions do |ff| %>
+    <div>
+      <span class="subfield">
+        <%= ff.label :question_type %>:
+        <%= ff.select :question_type, @options %> |
+      </span>
+      <span class="subfield">
+        <%= ff.label :prompt %>:
+        <%= ff.text_field :prompt %>
+      <span>
+    </div>
+  <% end %>
   <div class="actions">
     <%= f.submit %>
   </div>

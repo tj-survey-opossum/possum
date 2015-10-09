@@ -13,16 +13,20 @@ class SurveysController < ApplicationController
   # GET /surveys/new
   def new
     @survey = Survey.new
+    @survey.questions.build
+    @options = Question.type_names
+    @survey.author = Author.find(params[:format])
   end
 
   # GET /surveys/1/edit
   def edit
+    @survey.questions.build
+    @options = Question.type_names
   end
 
   # POST /surveys
   def create
     @survey = Survey.new(survey_params)
-
     if @survey.save
       redirect_to @survey, notice: 'Survey was successfully created.'
     else
@@ -53,6 +57,7 @@ class SurveysController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def survey_params
-      params.require(:survey).permit(:author_id, :title, :description, :published)
+      params.require(:survey).permit(:author_id, :title, :description, :published,
+                    questions_attributes: [:id, :question_type, :prompt, :_destroy])
     end
 end

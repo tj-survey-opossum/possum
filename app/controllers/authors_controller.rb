@@ -1,6 +1,10 @@
 class AuthorsController < ApplicationController
-  before_action :set_author, only: [:show, :edit, :update, :destroy]
+  before_action :set_author, only: [:dashboard, :show, :edit, :update, :destroy]
 
+  #GET /
+  def dashboard
+
+  end
   # GET /authors
   def index
     @authors = Author.all
@@ -53,6 +57,6 @@ class AuthorsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def author_params
-      params.require(:author).permit(:name, :email, :password_digest)
+      params.require(:author).permit(:name, :email, :password)
     end
 end
