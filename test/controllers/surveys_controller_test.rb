@@ -3,6 +3,7 @@ require 'test_helper'
 class SurveysControllerTest < ActionController::TestCase
   setup do
     @survey = surveys(:one)
+    @author = authors(:one)
   end
 
   test "should get index" do
@@ -12,7 +13,7 @@ class SurveysControllerTest < ActionController::TestCase
   end
 
   test "should get new" do
-    get :new
+    get :new, format: @author
     assert_response :success
   end
 
