@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
 
   def new
+
   end
 
   def create
@@ -15,13 +16,8 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:author_id] = nil
+    flash[:notice] = "You have successfully logged out."
     redirect_to login_path
-  end
-
-private
-
-  def author_params
-    params.require(:author).permit(:name, :email, :password)
   end
 
 end

@@ -7,6 +7,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <h3 class="warning"><%= warning %></h3>
+  <h3 class="alert"><%= alert %></h3>
   <div id="container">
     <div id="author_header">
       <% if current_author %>

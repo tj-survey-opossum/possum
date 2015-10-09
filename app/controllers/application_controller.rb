@@ -13,10 +13,10 @@ private
 
   helper_method :current_author
 
-  def must_log_in
+  def require_login
     redirect_to login_path, alert: "You must log in to do that!" if current_author.nil?
   end
 
-  helper_method :must_log_in
+  helper_method :require_login
 
 end

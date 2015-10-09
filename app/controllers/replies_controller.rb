@@ -1,5 +1,6 @@
 class RepliesController < ApplicationController
   before_action :set_reply, only: [:show, :edit, :update, :destroy]
+  before_action :require_login
 
   # GET /replies
   def index
