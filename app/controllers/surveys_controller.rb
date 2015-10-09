@@ -1,6 +1,7 @@
 class SurveysController < ApplicationController
   before_action :set_survey, only: [:show, :edit, :update, :destroy]
   before_action :require_login
+  before_action :survey_owner, only: [:edit, :update, :destroy]
 
   # GET /surveys
   def index
@@ -75,6 +76,12 @@ class SurveysController < ApplicationController
     def survey_params
       params.require(:survey).permit(:author_id, :title, :description, :published,
                     questions_attributes: [:id, :question_type, :prompt, :_destroy])
+    end
+
+    def survey_owner
+      unless @survey.author_id == session[:author_id]
+      flash[:notice] = 'These are not the surveys you are looking for.'
+      redirect_to jobs_path
     end
 
     # def require_permission
