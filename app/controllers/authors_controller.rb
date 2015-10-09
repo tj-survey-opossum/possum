@@ -5,7 +5,7 @@ class AuthorsController < ApplicationController
   def index
     @authors = Author.all
     @survey = Survey.all where author_id....
-    @reply_groups = ReplyGroups.all 
+    @reply_groups = ReplyGroups.all
   end
 
   # GET /authors/1

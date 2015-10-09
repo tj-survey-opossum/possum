@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+
   def new
   end
 
@@ -15,4 +16,11 @@ class SessionsController < ApplicationController
   def destroy
 
   end
+
+private
+
+  def author_params
+    params.require(:author).permit(:name, :email, :password_digest)
+  end
+
 end
