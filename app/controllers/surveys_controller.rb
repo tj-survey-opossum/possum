@@ -27,8 +27,9 @@ class SurveysController < ApplicationController
   # POST /surveys
   def create
     @survey = Survey.new(survey_params)
+
     if @survey.save
-      redirect_to @survey, notice: 'Survey was successfully created.'
+      redirect_to dashboard_author_url(@survey.author_id), notice: 'Survey was successfully created.'
     else
       render :new
     end
@@ -37,7 +38,7 @@ class SurveysController < ApplicationController
   # PATCH/PUT /surveys/1
   def update
     if @survey.update(survey_params)
-      redirect_to @survey, notice: 'Survey was successfully updated.'
+      redirect_to dashboard_author_url(@survey.author_id), notice: 'Survey was successfully updated.'
     else
       render :edit
     end
@@ -45,22 +46,26 @@ class SurveysController < ApplicationController
 
   def publish
     if survey.questions.empty?
-      redirect_to #dashboard_author(author)
+      redirect_to dashboard_author_url(@survey.author_id), alert: "Survey must have questions to be published."
     else
       @survey.published = true
+      redirect_to dashboard_author_url(@survey.author_id), notice: "Survey was successfully published."
     end
+  end
+
+  def unpublish
+
   end
 
   # DELETE /surveys/1
   def destroy
     @survey.destroy
-    redirect_to surveys_url, notice: 'Survey was successfully destroyed.'
+    redirect_to dashboard_author_url(@survey.author_id), notice: 'Survey was successfully destroyed.'
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_survey
-      byebug
       @survey = Survey.find(params[:id])
     end
 

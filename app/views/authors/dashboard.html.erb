@@ -6,7 +6,6 @@
   <div class="row">
     <div class="col-md-6 col-md-offset-1 survey-display">
       <h3 id="survey-title"><%= survey.title %></h3>
-      <%= survey.id %>
       <span id="survey-display-links">
         <% unless survey.published %>
           <%= link_to 'Publish', publish_survey_path(survey) %> |
