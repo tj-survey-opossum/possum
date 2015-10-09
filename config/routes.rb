@@ -9,7 +9,11 @@ Rails.application.routes.draw do
   resources :submissions
   resources :replies
   resources :questions
-  resources :surveys
+  resources :surveys do
+    member do
+      post 'publish'
+    end
+  end
   resources :authors do
     member do
       get 'dashboard'

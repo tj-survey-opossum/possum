@@ -1,6 +1,30 @@
-You have arrived
-
 <h1> Welcome, <%= @author.name %> </h1>
 
+<h2 id = "Survey header"> Your Surveys </h2>
 
-<%= link_to 'Add a new survey', new_survey_path(@author) %>
+<% @author.surveys.each do |survey| %>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-1 survey-display">
+      <h3 id="survey-title"><%= survey.title %></h3>
+      <%= survey.id %>
+      <span id="survey-display-links">
+        <% unless survey.published %>
+          <%= link_to 'Publish', publish_survey_path(survey) %> |
+        <% end %>
+        <%= link_to 'Delete this survey', survey_path(survey), method: :delete, data: { confirm: 'Are you sure?' } %> |
+        <%= link_to 'Edit this survey', edit_survey_path(survey) %>
+      </span>
+
+      <div class="row">
+        <div class="col-md-4">
+          <div id="survey-description"><%= survey.description %></div>
+          <div id="number-questions"><%= survey.number_of_questions %> Questions</div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<div class="bottom-links" >
+  <%= link_to 'Add a new survey', new_survey_path(@author) %>
+</div>

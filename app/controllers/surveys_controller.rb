@@ -43,6 +43,14 @@ class SurveysController < ApplicationController
     end
   end
 
+  def publish
+    if survey.questions.empty?
+      redirect_to #dashboard_author(author)
+    else
+      @survey.published = true
+    end
+  end
+
   # DELETE /surveys/1
   def destroy
     @survey.destroy
@@ -52,6 +60,7 @@ class SurveysController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_survey
+      byebug
       @survey = Survey.find(params[:id])
     end
 
