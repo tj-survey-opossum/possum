@@ -4,12 +4,12 @@ class SessionsController < ApplicationController
   end
 
   def create
-    author = Author.find_by(params[:email])
+    author = Author.find_by_email(params[:email])
     if author && author.authenticate(params[:password])
       session[:author_id] = author.id
       redirect_to surveys_path
     else
-      redirect_to login
+      redirect_to login_path
     end
   end
 
