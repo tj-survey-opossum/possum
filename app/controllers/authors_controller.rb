@@ -2,7 +2,7 @@ class AuthorsController < ApplicationController
   before_action :set_author, only: [:dashboard, :show, :edit, :update, :destroy]
 
   #GET /
-  def dashboard
+  def  dashboard
 
   end
   # GET /authors
@@ -12,6 +12,7 @@ class AuthorsController < ApplicationController
 
   # GET /authors/1
   def show
+
   end
 
   # GET /authors/new

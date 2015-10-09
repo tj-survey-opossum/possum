@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SurveyOpossum</title>
+  <link rel="stylesheet" media="all" href="/assets/authors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" data-turbolinks-track="true" />
+<link rel="stylesheet" media="all" href="/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" data-turbolinks-track="true" />
+<link rel="stylesheet" media="all" href="/assets/replies.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" data-turbolinks-track="true" />
+<link rel="stylesheet" media="all" href="/assets/scaffolds.self-d96c7c9909b112afc60f123d666381cd20617431ae87ae68cc3f8c038db24588.css?body=1" data-turbolinks-track="true" />
+<link rel="stylesheet" media="all" href="/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" data-turbolinks-track="true" />
+<link rel="stylesheet" media="all" href="/assets/submissions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" data-turbolinks-track="true" />
+<link rel="stylesheet" media="all" href="/assets/surveys.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" data-turbolinks-track="true" />
+<link rel="stylesheet" media="all" href="/assets/application.self-7d2d05d6cc0351d8b9d2f5f7e61cf361383d947261eff7c5d11bcc1dcf007698.css?body=1" data-turbolinks-track="true" />
+  <script src="/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/replies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/submissions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/surveys.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" data-turbolinks-track="true"></script>
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="qjn4wppg+Xxjt40u3NTnS5ntLxEA0KsdMIVsZNT6TVLhvny3WRZlJUxQaS6ubTpLtX5ZJZlP1bI6Qgv0BEVMhA==" />
+        <!-- Footnotes Style -->
+        <style type="text/css">
+          #footnotes_debug {font-size: 11px; font-family: Consolas, monaco, monospace; font-weight: normal; margin: 2em 0 1em 0; text-align: center; color: #444; line-height: 16px; background: #fff;}
+          #footnotes_debug th, #footnotes_debug td {color: #444; line-height: 18px;}
+          #footnotes_debug a {color: #9b1b1b; font-weight: inherit; text-decoration: none; line-height: 18px;}
+          #footnotes_debug table {text-align: left; width: 100%;}
+          #footnotes_debug table td {padding: 5px; border-bottom: 1px solid #ccc;}
+          #footnotes_debug table td strong {color: #9b1b1b;}
+          #footnotes_debug table th {padding: 5px; border-bottom: 1px solid #ccc;}
+          #footnotes_debug table tr:nth-child(2n) td {background: #eee;}
+          #footnotes_debug table tr:nth-child(2n + 1) td {background: #fff;}
+          #footnotes_debug tbody {text-align: left;}
+          #footnotes_debug .name_values td {vertical-align: top;}
+          #footnotes_debug legend {background-color: #fff;}
+          #footnotes_debug fieldset {text-align: left; border: 1px dashed #aaa; padding: 0.5em 1em 1em 1em; margin: 1em 2em; color: #444; background-color: #FFF;}
+                      #footnotes_debug #toggle_footnotes {display: none;}
+
+          /* Aditional Stylesheets */
+          
+        </style>
+        <!-- End Footnotes Style -->
+</head>
+<body>
+  
+  <h3 class="warning"></h3>
+  <h3 class="alert"></h3>
+  <div id="container">
+    <div id="author_header">
+        Logged in as a@example.com.
+        <a href="/logout">Log out</a>
+    </div>
+  </div>
+
+  <p id="notice"></p>
+
+<p>
+  <strong>Name:</strong>
+  author
+</p>
+
+<p>
+  <strong>Email:</strong>
+  a@example.com
+</p>
+
+<p>
+  <strong>Password digest:</strong>
+  $2a$10$GZXrxt0jvt0kA485zlI5vuNmJ3LECQBzrAECAA9UEOqtZML0c5VCu
+</p>
+
+<a href="/authors/3/edit">Edit</a> |
+<a href="/authors">Back</a>
+
+
+        <!-- Footnotes -->
+        <div style="clear:both"></div>
+        <div id="footnotes_debug">
+          <a id="toggle_footnotes" href="#" onclick="Footnotes.toggle('all_footnotes'); return false;">fn</a>
+          <div id="all_footnotes" >
+            Edit: <a href="txmt://open?url=file:///Users/josh/IronYard/week6/survey_opossum/app/controllers/authors_controller.rb&amp;line=14&amp;column=3" onclick="">Controller</a> | 
+<a href="txmt://open?url=file:///Users/josh/IronYard/week6/survey_opossum/app/views/authors/show.html.erb&amp;amp;line=1&amp;amp;column=1" onclick="">View (0.632ms)</a> | 
+<a href="#" onclick="Footnotes.hideAllAndToggle('partials_debug_info');return false;">Partials (0)</a> | 
+<a href="#" onclick="Footnotes.hideAllAndToggle('stylesheets_debug_info');return false;">Stylesheets (0)</a> | 
+<a href="#" onclick="Footnotes.hideAllAndToggle('javascripts_debug_info');return false;">Javascripts (0)</a><br />Show: <a href="#" onclick="Footnotes.hideAllAndToggle('assigns_debug_info');return false;">Assigns (2)</a> | 
+<a href="#" onclick="Footnotes.hideAllAndToggle('session_debug_info');return false;">Session (3)</a> | 
+<a href="#" onclick="Footnotes.hideAllAndToggle('cookies_debug_info');return false;">Cookies (8)</a> | 
+<a href="#" onclick="Footnotes.hideAllAndToggle('params_debug_info');return false;">Params (3)</a> | 
+<a href="#" onclick="Footnotes.hideAllAndToggle('filters_debug_info');return false;">Filters</a> | 
+<a href="#" onclick="Footnotes.hideAllAndToggle('routes_debug_info');return false;">Routes</a> | 
+<a href="#" onclick="Footnotes.hideAllAndToggle('env_debug_info');return false;">Env</a> | 
+<a href="#" onclick="Footnotes.hideAllAndToggle('queries_debug_info');return false;">        <span style="background-color:#ffffff">Queries (2)</span>
+        <span style="background-color:#ffffff">DB (0.871ms)</span>
+</a> | 
+<a href="#" onclick="Footnotes.hideAllAndToggle('log_debug_info');return false;">Log (0)</a><br />
+                        <fieldset id="partials_debug_info" style="display: none">
+              <legend>Partials</legend>
+              <div></div>
+            </fieldset>
+            <fieldset id="stylesheets_debug_info" style="display: none">
+              <legend>Stylesheets</legend>
+              <div></div>
+            </fieldset>
+            <fieldset id="javascripts_debug_info" style="display: none">
+              <legend>Javascripts</legend>
+              <div></div>
+            </fieldset>
+            <fieldset id="assigns_debug_info" style="display: none">
+              <legend>Assigns</legend>
+              <div>          <table summary="Debug information for Assigns (2)" >
+            <thead><tr><th>Name</th><th>Value</th></tr></thead>
+            <tbody><tr><td><strong>@author</strong><br /><em>Author</em></td><td>#&lt;Author id: 3, name: "author", email: "a@example.com", password_digest: "$2a$10$GZXrxt0jvt0kA485zlI5vuNmJ3LECQBzrAECAA9UEOq...", created_at: "2015-10-09 11:24:26", updated_at: "2015-10-09 11:24:26"&gt;</td></tr><tr><td><strong>@current_author</strong><br /><em>Author</em></td><td>#&lt;Author id: 2, name: "author", email: "a@example.com", password_digest: "$2a$10$iIyosS0nKR35aHE5YxSmju9O0j.aX5z/NMIUNnvjcT8...", created_at: "2015-10-09 00:20:46", updated_at: "2015-10-09 00:20:46"&gt;</td></tr></tbody>
+          </table>
+</div>
+            </fieldset>
+            <fieldset id="session_debug_info" style="display: none">
+              <legend>Session</legend>
+              <div>          <table class="name_value" summary="Debug information for Session (3)" >
+            <thead><tr><th>Name</th><th>Value</th></tr></thead>
+            <tbody><tr><td>:session_id</td><td>"0f0512941213f58d71850728321d4e9d"</td></tr><tr><td>:_csrf_token</td><td>"S4eEdcN2nFkv5+QAcrndACyTdjSZn36vCsdnkNC/AdY="</td></tr><tr><td>:author_id</td><td>2</td></tr></tbody>
+          </table>
+</div>
+            </fieldset>
+            <fieldset id="cookies_debug_info" style="display: none">
+              <legend>Cookies</legend>
+              <div>          <table class="name_value" summary="Debug information for Cookies (8)" >
+            <thead><tr><th>Name</th><th>Value</th></tr></thead>
+            <tbody><tr><td>:_hracker_session</td><td>"QkhOYkxGbVIrV2RMTjc2U2lPSTZRNFVnRTdBM3FVTUlIemNjTU5tbUJrUGthTS9zTUZYbjIydVVHWXQwd3FQNUJTVmlib2FSdTFDTS80THNPL0MycHpFTXhET1VtbW1KbDdCU0JLWkIyVnorS2J0RUUyYWU2dHhnTFhOMW5jOHpSK0RwK0JGS2FSZFdHQkgwbXFTZm5nPT0tLVBwV0Y4UlR4SU1oUldLNDhQUExkSWc9PQ==--9f1aaf75344c05336730908287556ab42f1d0087"</td></tr><tr><td>:_menu_session</td><td>"eWY3NkdKYWZhOE9wTG4vVlF2emU0U0cwVWtCSkhIakNHbkVaTHY5T0dqNHFpaUR3UTNUNm9vakxZSnJHLzNnSkFBY1BQaC9Vc0hwY2NVcFNiV0pac0JrZFdod2w4dE1kdE1mVkUxb0hWOTNIa1ZEQkxFeXZVQ1kyanpCODJQSGQvMnZPblpkU1MwL2FhdmxBamVpWFpBPT0tLTlYMG5lT01FeGpVaGZqQkEzVXBxdnc9PQ==--93f5e7f0e1eb1771e21026ff854ca2248d8129a7"</td></tr><tr><td>:_finalize_session</td><td>"OVBpa21JeSsybEZzYUZuOWczdVd1V09KZnM0U1NNTjE4b2pDNDJ3SjdtMFdkUTFGbjhZZ3JNWHlNWUZmQ0trckxZS21MLzNwODBsZis3M2Z5MVJBRjlGdlMrRTF3amU0SCtwNDgxRGVkRkhzdStLTjAxZi9ENDYycHJVVkFjc1V0VXJOOFlUS0dFTW12NnROamhwUkJnPT0tLUxla0hlQ2M1TXA5UGpVRDF0RHhGRXc9PQ==--9c58e1308d27e307b9651a60fb44f8a4fbc3b63f"</td></tr><tr><td>:_menu_too_session</td><td>"Yjhid3ZXVWo1eVp1cHIyT0ZGa1gvZGVCZkM4am5za2VjZC9vUDNtc05TSlgxN1MwSHZkRnRBNm14ZXpGWld0WHFiRFNiVEpZdHlnYVhtWWxjU0RpSFRMNWRsTWsvekJFU1d2ekEraWhTb2xQYlpLWEIxeXp6Qy9vaUorYWl1aXdMZFBnaHR6OElTL3drYUVOZFcxaU5BPT0tLXVZL1JnWkF6OWwyYmcxVUpueFdLWUE9PQ==--deafafb58a904ba61bbc0d4b422e1fbf7916d244"</td></tr><tr><td>:_gradebook_session</td><td>"bzNLTFZCVnlxUTlCanJKeXZqSEZDV3A0ZHBZODU5cS9lWkxFSGoyOFRaczEreVhaODh5dHAybmFHdGxFWUI3NmVnWW0yZklGQzRJNmV5ekJXSnljOUVwY3R2TUdwMnZiOXBhZnYxbmFtbjd4QTJiSUJIVkt4Qnd4YlRIZEVkaUdtdWlrdDNSYzFWMFRIVnhYbDVmMzRlblZrZlNJQmpGSG81eXJMWnJPRlhld2N1RmN3R3ZPVHdobFY5U1VJWGl3MWp4TVlIVy9TZWpxOVMyTk8wVFVjRGV0Y0xDUzYvK1daMGg2MFlNbmZhTDlkRmVneWdLSGRTanhEWG0rY0l0Uy0tOHQrQnBUY1E3WGpGbXp3NlJyNEhuQT09--4b6316e36459fbe47504788cc174fbbaec6be962"</td></tr><tr><td>:_zoo_session</td><td>"ODFnY2EzVzFhR0dZYyt3Qk5wVXhYeEs5UlpKa0FVZGMycitKbmdlLzhsSW5JMU1KVVRUbFladkY0MjNEd1VCZDlPSjBsa2wyc3BLUEl0aDZEU0pOKzdpY1RMZ2ZZVjJyTVQ3Mzh2NFRSOFZiWXpVT0xlSmwzM09MdHFGZ0Q1RVJhZHBkbWFOd3pkeHdXWmJ4SkM1V0RldWNBeGVTZ01rS3o3bktmbUJEd1VzZGQzZW1pSDA5bytGWFpUajhFaURxK0pna252OFl4RkV5ZkpMenQ5dDJwQ1d0aXl2Rjgrdzk2aWdGd0lHcEhza1Q5Y2lVVHNxcmZZMHd5Um1kWk4vTy0tVkZFVjNHWk5qL3gzbmRvYTlFa0pZQT09--f4143eec477576e72031e1e08f53c7b3f902c579"</td></tr><tr><td>:_gbook_session</td><td>"dTVCcG9XZlFxQWNnZDdDdTZDZ0s0eTNQZktWYTNxTmNQUUhNTUg5d0VHdTlxMG9FQnJ2WllsRm1WcVFpU1RUSmtNSnB4c2x1UGh2ejBjVGhxYkxxL2pGTDhOblhVb0pYdDhOVXVNUE0rNnFQbG9qdS9Cc0lOMlBsdUtrVDZGVGxZQ3RQY0s5VDA0ZTIwMzl1ZXdiaFRtR1d2NWpzMWxJMlI5R2pGa21QYlA2R0gyNmQ2VFFsQjZTLzZ4NXp1SVcyeTFncTVTQWpIVmp4bG9FRDVrR2RTcWt6ZHdLbFNRcUlmOG5STDRDZTFLRGFpVXpYb3dGZVBXbFdJaFJoMDFxa0ErbEx6NS9zZitTZjV6RzZITzMrcmc9PS0tOUswM1lwUDNrTmhMTE1CTThWVkpiUT09--d3cc59786a670014181958421272fd80881e1d53"</td></tr><tr><td>:_survey_opossum_session</td><td>"SnJ3NGNGMW84QjgyWUxwdTVhR3djdE4zOSs4YXJMTkYwMGlVNHBHRW1DOWdITFd3SWtXUmVJRi8vd0NtMmI5cUdDa3BINHU5Sklha0t5Y0pzcU9wU3czOTdmNFl2L2hHVUw5cEhzMy8xc3JRL1dyMTNBWSt6UG45SExEMWhKU1QwRWI2aCs4a1J5ZzFIUWtjQnYvSzZMUlpiTVIxTEN4Z0FEcHlFY25wR1YwPS0tbnB4MFFGWUM3ZWg2S2NjeHZWOVd6UT09--a9672110c028b6568318d4e33a7e7b73f7fec8f5"</td></tr></tbody>
+          </table>
+</div>
+            </fieldset>
+            <fieldset id="params_debug_info" style="display: none">
+              <legend>Params</legend>
+              <div>          <table class="name_value" summary="Debug information for Params (3)" >
+            <thead><tr><th>Name</th><th>Value</th></tr></thead>
+            <tbody><tr><td>:controller</td><td>"authors"</td></tr><tr><td>:action</td><td>"show"</td></tr><tr><td>:id</td><td>"3"</td></tr></tbody>
+          </table>
+</div>
+            </fieldset>
+            <fieldset id="filters_debug_info" style="display: none">
+              <legend>Filter chain for AuthorsController</legend>
+              <div></div>
+            </fieldset>
+            <fieldset id="routes_debug_info" style="display: none">
+              <legend>Routes for AuthorsController</legend>
+              <div>          <table summary="Debug information for Routes" >
+            <thead><tr><th>Path</th><th>Name</th><th>Options</th><th>Requirements</th></tr></thead>
+            <tbody><tr><td>dashboard_author</td><td>required_defaultsrequest_method</td><td>{:action=>"dashboard"}</td><td>{:required_defaults=>[:controller, :action], :request_method=>/^GET$/}</td></tr><tr><td>authors</td><td>required_defaultsrequest_method</td><td>{:action=>"index"}</td><td>{:required_defaults=>[:controller, :action], :request_method=>/^GET$/}</td></tr><tr><td></td><td>required_defaultsrequest_method</td><td>{:action=>"create"}</td><td>{:required_defaults=>[:controller, :action], :request_method=>/^POST$/}</td></tr><tr><td>new_author</td><td>required_defaultsrequest_method</td><td>{:action=>"new"}</td><td>{:required_defaults=>[:controller, :action], :request_method=>/^GET$/}</td></tr><tr><td>edit_author</td><td>required_defaultsrequest_method</td><td>{:action=>"edit"}</td><td>{:required_defaults=>[:controller, :action], :request_method=>/^GET$/}</td></tr><tr><td>author</td><td>required_defaultsrequest_method</td><td>{:action=>"show"}</td><td>{:required_defaults=>[:controller, :action], :request_method=>/^GET$/}</td></tr><tr><td></td><td>required_defaultsrequest_method</td><td>{:action=>"update"}</td><td>{:required_defaults=>[:controller, :action], :request_method=>/^PATCH$/}</td></tr><tr><td></td><td>required_defaultsrequest_method</td><td>{:action=>"update"}</td><td>{:required_defaults=>[:controller, :action], :request_method=>/^PUT$/}</td></tr><tr><td></td><td>required_defaultsrequest_method</td><td>{:action=>"destroy"}</td><td>{:required_defaults=>[:controller, :action], :request_method=>/^DELETE$/}</td></tr></tbody>
+          </table>
+</div>
+            </fieldset>
+            <fieldset id="env_debug_info" style="display: none">
+              <legend>Env</legend>
+              <div>          <table >
+            <thead><tr><th>Key</th><th>Value</th></tr></thead>
+            <tbody><tr><td>GATEWAY_INTERFACE</td><td>CGI/1.2</td></tr><tr><td>HTTP_ACCEPT</td><td>text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</td></tr><tr><td>HTTP_ACCEPT_ENCODING</td><td>gzip, deflate, sdch</td></tr><tr><td>HTTP_ACCEPT_LANGUAGE</td><td>en-US,en;q=0.8</td></tr><tr><td>HTTP_CONNECTION</td><td>keep-alive</td></tr><tr><td>HTTP_COOKIE</td><td><a href="#" style="color:#009" onclick="Footnotes.hideAllAndToggle('cookies_debug_info');return false;">See cookies on its tab</a></td></tr><tr><td>HTTP_HOST</td><td>localhost:3000</td></tr><tr><td>HTTP_IF_NONE_MATCH</td><td>W/"0107932cf3a7c41adb32df555306b24b"</td></tr><tr><td>HTTP_UPGRADE_INSECURE_REQUESTS</td><td>1</td></tr><tr><td>HTTP_USER_AGENT</td><td>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36</td></tr><tr><td>HTTP_VERSION</td><td>HTTP/1.1</td></tr><tr><td>ORIGINAL_FULLPATH</td><td>/authors/3</td></tr><tr><td>ORIGINAL_SCRIPT_NAME</td><td></td></tr><tr><td>PATH_INFO</td><td>/authors/3</td></tr><tr><td>QUERY_STRING</td><td></td></tr><tr><td>REMOTE_ADDR</td><td>::1</td></tr><tr><td>REQUEST_METHOD</td><td>GET</td></tr><tr><td>REQUEST_PATH</td><td>/authors/3</td></tr><tr><td>REQUEST_URI</td><td>/authors/3</td></tr><tr><td>ROUTES_70255972899520_SCRIPT_NAME</td><td></td></tr><tr><td>SCRIPT_NAME</td><td></td></tr><tr><td>SERVER_NAME</td><td>localhost</td></tr><tr><td>SERVER_PORT</td><td>3000</td></tr><tr><td>SERVER_PROTOCOL</td><td>HTTP/1.1</td></tr><tr><td>SERVER_SOFTWARE</td><td>2.14.0</td></tr><tr><td>action_controller.instance</td><td>#&lt;AuthorsController:0x007fcb7f66c9c8&gt;</td></tr><tr><td>action_dispatch.backtrace_cleaner</td><td>#&lt;Rails::BacktraceCleaner:0x007fcb7f013568&gt;</td></tr><tr><td>action_dispatch.cookies</td><td>#&lt;ActionDispatch::Cookies::CookieJar:0x007fcb7fe43660&gt;</td></tr><tr><td>action_dispatch.cookies_digest</td><td></td></tr><tr><td>action_dispatch.cookies_serializer</td><td>json</td></tr><tr><td>action_dispatch.encrypted_cookie_salt</td><td>encrypted cookie</td></tr><tr><td>action_dispatch.encrypted_signed_cookie_salt</td><td>signed encrypted cookie</td></tr><tr><td>action_dispatch.http_auth_salt</td><td>http authentication</td></tr><tr><td>action_dispatch.key_generator</td><td>#&lt;ActiveSupport::CachingKeyGenerator:0x007fcb7faee500&gt;</td></tr><tr><td>action_dispatch.logger</td><td>#&lt;ActiveSupport::Logger:0x007fcb7b1be240&gt;</td></tr><tr><td>action_dispatch.parameter_filter</td><td>[:password]</td></tr><tr><td>action_dispatch.redirect_filter</td><td>[]</td></tr><tr><td>action_dispatch.remote_ip</td><td>::1</td></tr><tr><td>action_dispatch.request.content_type</td><td></td></tr><tr><td>action_dispatch.request.flash_hash</td><td>#&lt;ActionDispatch::Flash::FlashHash:0x007fcb7f5fecc0&gt;</td></tr><tr><td>action_dispatch.request.formats</td><td>[#&lt;Mime::Type:0x007fcb7b614858 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html"&gt;]</td></tr><tr><td>action_dispatch.request.parameters</td><td>{"controller"=&gt;"authors", "action"=&gt;"show", "id"=&gt;"3"}</td></tr><tr><td>action_dispatch.request.path_parameters</td><td>{:controller=&gt;"authors", :action=&gt;"show", :id=&gt;"3"}</td></tr><tr><td>action_dispatch.request.query_parameters</td><td>{}</td></tr><tr><td>action_dispatch.request.request_parameters</td><td>{}</td></tr><tr><td>action_dispatch.request.unsigned_session_cookie</td><td>{"session_id"=&gt;"0f0512941213f58d71850728321d4e9d", "_csrf_token"=&gt;"S4eEdcN2nFkv5+QAcrndACyTdjSZn36vCsdnkNC/AdY=", "author_id"=&gt;2}</td></tr><tr><td>action_dispatch.request_id</td><td>b1e97c76-4d40-4160-9546-14d035b0c722</td></tr><tr><td>action_dispatch.routes</td><td>#&lt;ActionDispatch::Routing::RouteSet:0x007fcb7c9db580&gt;</td></tr><tr><td>action_dispatch.secret_key_base</td><td>a03afef6a7a4fd0e8a1b94f759c9a9a84485958bf7c49ecc2fe4d63e49ba548974734fee0756f8b800ff0ba36d8a2f6f546b286fa360333c556f884d467f5992</td></tr><tr><td>action_dispatch.secret_token</td><td></td></tr><tr><td>action_dispatch.show_detailed_exceptions</td><td>true</td></tr><tr><td>action_dispatch.show_exceptions</td><td>true</td></tr><tr><td>action_dispatch.signed_cookie_salt</td><td>signed cookie</td></tr><tr><td>puma.socket</td><td>#&lt;TCPSocket:0x007fcb7f68c890&gt;</td></tr><tr><td>rack.after_reply</td><td>[]</td></tr><tr><td>rack.errors</td><td>#&lt;IO:0x007fcb7a8c6520&gt;</td></tr><tr><td>rack.hijack</td><td>#&lt;Puma::Client:0x007fcb7f68c868&gt;</td></tr><tr><td>rack.hijack?</td><td>true</td></tr><tr><td>rack.input</td><td>#&lt;Puma::NullIO:0x007fcb7cb2ad28&gt;</td></tr><tr><td>rack.multiprocess</td><td>false</td></tr><tr><td>rack.multithread</td><td>false</td></tr><tr><td>rack.request.cookie_hash</td><td>{"_hracker_session"=&gt;"QkhOYkxGbVIrV2RMTjc2U2lPSTZRNFVnRTdBM3FVTUlIemNjTU5tbUJrUGthTS9zTUZYbjIydVVHWXQwd3FQNUJTVmlib2FSdTFDTS80THNPL0MycHpFTXhET1VtbW1KbDdCU0JLWkIyVnorS2J0RUUyYWU2dHhnTFhOMW5jOHpSK0RwK0JGS2FSZFdHQkgwbXFTZm5nPT0tLVBwV0Y4UlR4SU1oUldLNDhQUExkSWc9PQ==--9f1aaf75344c05336730908287556ab42f1d0087", "_menu_session"=&gt;"eWY3NkdKYWZhOE9wTG4vVlF2emU0U0cwVWtCSkhIakNHbkVaTHY5T0dqNHFpaUR3UTNUNm9vakxZSnJHLzNnSkFBY1BQaC9Vc0hwY2NVcFNiV0pac0JrZFdod2w4dE1kdE1mVkUxb0hWOTNIa1ZEQkxFeXZVQ1kyanpCODJQSGQvMnZPblpkU1MwL2FhdmxBamVpWFpBPT0tLTlYMG5lT01FeGpVaGZqQkEzVXBxdnc9PQ==--93f5e7f0e1eb1771e21026ff854ca2248d8129a7", "_finalize_session"=&gt;"OVBpa21JeSsybEZzYUZuOWczdVd1V09KZnM0U1NNTjE4b2pDNDJ3SjdtMFdkUTFGbjhZZ3JNWHlNWUZmQ0trckxZS21MLzNwODBsZis3M2Z5MVJBRjlGdlMrRTF3amU0SCtwNDgxRGVkRkhzdStLTjAxZi9ENDYycHJVVkFjc1V0VXJOOFlUS0dFTW12NnROamhwUkJnPT0tLUxla0hlQ2M1TXA5UGpVRDF0RHhGRXc9PQ==--9c58e1308d27e307b9651a60fb44f8a4fbc3b63f", "_menu_too_session"=&gt;"Yjhid3ZXVWo1eVp1cHIyT0ZGa1gvZGVCZkM4am5za2VjZC9vUDNtc05TSlgxN1MwSHZkRnRBNm14ZXpGWld0WHFiRFNiVEpZdHlnYVhtWWxjU0RpSFRMNWRsTWsvekJFU1d2ekEraWhTb2xQYlpLWEIxeXp6Qy9vaUorYWl1aXdMZFBnaHR6OElTL3drYUVOZFcxaU5BPT0tLXVZL1JnWkF6OWwyYmcxVUpueFdLWUE9PQ==--deafafb58a904ba61bbc0d4b422e1fbf7916d244", "_gradebook_session"=&gt;"bzNLTFZCVnlxUTlCanJKeXZqSEZDV3A0ZHBZODU5cS9lWkxFSGoyOFRaczEreVhaODh5dHAybmFHdGxFWUI3NmVnWW0yZklGQzRJNmV5ekJXSnljOUVwY3R2TUdwMnZiOXBhZnYxbmFtbjd4QTJiSUJIVkt4Qnd4YlRIZEVkaUdtdWlrdDNSYzFWMFRIVnhYbDVmMzRlblZrZlNJQmpGSG81eXJMWnJPRlhld2N1RmN3R3ZPVHdobFY5U1VJWGl3MWp4TVlIVy9TZWpxOVMyTk8wVFVjRGV0Y0xDUzYvK1daMGg2MFlNbmZhTDlkRmVneWdLSGRTanhEWG0rY0l0Uy0tOHQrQnBUY1E3WGpGbXp3NlJyNEhuQT09--4b6316e36459fbe47504788cc174fbbaec6be962", "_zoo_session"=&gt;"ODFnY2EzVzFhR0dZYyt3Qk5wVXhYeEs5UlpKa0FVZGMycitKbmdlLzhsSW5JMU1KVVRUbFladkY0MjNEd1VCZDlPSjBsa2wyc3BLUEl0aDZEU0pOKzdpY1RMZ2ZZVjJyTVQ3Mzh2NFRSOFZiWXpVT0xlSmwzM09MdHFGZ0Q1RVJhZHBkbWFOd3pkeHdXWmJ4SkM1V0RldWNBeGVTZ01rS3o3bktmbUJEd1VzZGQzZW1pSDA5bytGWFpUajhFaURxK0pna252OFl4RkV5ZkpMenQ5dDJwQ1d0aXl2Rjgrdzk2aWdGd0lHcEhza1Q5Y2lVVHNxcmZZMHd5Um1kWk4vTy0tVkZFVjNHWk5qL3gzbmRvYTlFa0pZQT09--f4143eec477576e72031e1e08f53c7b3f902c579", "_gbook_session"=&gt;"dTVCcG9XZlFxQWNnZDdDdTZDZ0s0eTNQZktWYTNxTmNQUUhNTUg5d0VHdTlxMG9FQnJ2WllsRm1WcVFpU1RUSmtNSnB4c2x1UGh2ejBjVGhxYkxxL2pGTDhOblhVb0pYdDhOVXVNUE0rNnFQbG9qdS9Cc0lOMlBsdUtrVDZGVGxZQ3RQY0s5VDA0ZTIwMzl1ZXdiaFRtR1d2NWpzMWxJMlI5R2pGa21QYlA2R0gyNmQ2VFFsQjZTLzZ4NXp1SVcyeTFncTVTQWpIVmp4bG9FRDVrR2RTcWt6ZHdLbFNRcUlmOG5STDRDZTFLRGFpVXpYb3dGZVBXbFdJaFJoMDFxa0ErbEx6NS9zZitTZjV6RzZITzMrcmc9PS0tOUswM1lwUDNrTmhMTE1CTThWVkpiUT09--d3cc59786a670014181958421272fd80881e1d53", "_survey_opossum_session"=&gt;"SnJ3NGNGMW84QjgyWUxwdTVhR3djdE4zOSs4YXJMTkYwMGlVNHBHRW1DOWdITFd3SWtXUmVJRi8vd0NtMmI5cUdDa3BINHU5Sklha0t5Y0pzcU9wU3czOTdmNFl2L2hHVUw5cEhzMy8xc3JRL1dyMTNBWSt6UG45SExEMWhKU1QwRWI2aCs4a1J5ZzFIUWtjQnYvSzZMUlpiTVIxTEN4Z0FEcHlFY25wR1YwPS0tbnB4MFFGWUM3ZWg2S2NjeHZWOVd6UT09--a9672110c028b6568318d4e33a7e7b73f7fec8f5"}</td></tr><tr><td>rack.request.cookie_string</td><td>_hracker_session=QkhOYkxGbVIrV2RMTjc2U2lPSTZRNFVnRTdBM3FVTUlIemNjTU5tbUJrUGthTS9zTUZYbjIydVVHWXQwd3FQNUJTVmlib2FSdTFDTS80THNPL0MycHpFTXhET1VtbW1KbDdCU0JLWkIyVnorS2J0RUUyYWU2dHhnTFhOMW5jOHpSK0RwK0JGS2FSZFdHQkgwbXFTZm5nPT0tLVBwV0Y4UlR4SU1oUldLNDhQUExkSWc9PQ%3D%3D--9f1aaf75344c05336730908287556ab42f1d0087; _menu_session=eWY3NkdKYWZhOE9wTG4vVlF2emU0U0cwVWtCSkhIakNHbkVaTHY5T0dqNHFpaUR3UTNUNm9vakxZSnJHLzNnSkFBY1BQaC9Vc0hwY2NVcFNiV0pac0JrZFdod2w4dE1kdE1mVkUxb0hWOTNIa1ZEQkxFeXZVQ1kyanpCODJQSGQvMnZPblpkU1MwL2FhdmxBamVpWFpBPT0tLTlYMG5lT01FeGpVaGZqQkEzVXBxdnc9PQ%3D%3D--93f5e7f0e1eb1771e21026ff854ca2248d8129a7; _finalize_session=OVBpa21JeSsybEZzYUZuOWczdVd1V09KZnM0U1NNTjE4b2pDNDJ3SjdtMFdkUTFGbjhZZ3JNWHlNWUZmQ0trckxZS21MLzNwODBsZis3M2Z5MVJBRjlGdlMrRTF3amU0SCtwNDgxRGVkRkhzdStLTjAxZi9ENDYycHJVVkFjc1V0VXJOOFlUS0dFTW12NnROamhwUkJnPT0tLUxla0hlQ2M1TXA5UGpVRDF0RHhGRXc9PQ%3D%3D--9c58e1308d27e307b9651a60fb44f8a4fbc3b63f; _menu_too_session=Yjhid3ZXVWo1eVp1cHIyT0ZGa1gvZGVCZkM4am5za2VjZC9vUDNtc05TSlgxN1MwSHZkRnRBNm14ZXpGWld0WHFiRFNiVEpZdHlnYVhtWWxjU0RpSFRMNWRsTWsvekJFU1d2ekEraWhTb2xQYlpLWEIxeXp6Qy9vaUorYWl1aXdMZFBnaHR6OElTL3drYUVOZFcxaU5BPT0tLXVZL1JnWkF6OWwyYmcxVUpueFdLWUE9PQ%3D%3D--deafafb58a904ba61bbc0d4b422e1fbf7916d244; _gradebook_session=bzNLTFZCVnlxUTlCanJKeXZqSEZDV3A0ZHBZODU5cS9lWkxFSGoyOFRaczEreVhaODh5dHAybmFHdGxFWUI3NmVnWW0yZklGQzRJNmV5ekJXSnljOUVwY3R2TUdwMnZiOXBhZnYxbmFtbjd4QTJiSUJIVkt4Qnd4YlRIZEVkaUdtdWlrdDNSYzFWMFRIVnhYbDVmMzRlblZrZlNJQmpGSG81eXJMWnJPRlhld2N1RmN3R3ZPVHdobFY5U1VJWGl3MWp4TVlIVy9TZWpxOVMyTk8wVFVjRGV0Y0xDUzYvK1daMGg2MFlNbmZhTDlkRmVneWdLSGRTanhEWG0rY0l0Uy0tOHQrQnBUY1E3WGpGbXp3NlJyNEhuQT09--4b6316e36459fbe47504788cc174fbbaec6be962; _zoo_session=ODFnY2EzVzFhR0dZYyt3Qk5wVXhYeEs5UlpKa0FVZGMycitKbmdlLzhsSW5JMU1KVVRUbFladkY0MjNEd1VCZDlPSjBsa2wyc3BLUEl0aDZEU0pOKzdpY1RMZ2ZZVjJyTVQ3Mzh2NFRSOFZiWXpVT0xlSmwzM09MdHFGZ0Q1RVJhZHBkbWFOd3pkeHdXWmJ4SkM1V0RldWNBeGVTZ01rS3o3bktmbUJEd1VzZGQzZW1pSDA5bytGWFpUajhFaURxK0pna252OFl4RkV5ZkpMenQ5dDJwQ1d0aXl2Rjgrdzk2aWdGd0lHcEhza1Q5Y2lVVHNxcmZZMHd5Um1kWk4vTy0tVkZFVjNHWk5qL3gzbmRvYTlFa0pZQT09--f4143eec477576e72031e1e08f53c7b3f902c579; _gbook_session=dTVCcG9XZlFxQWNnZDdDdTZDZ0s0eTNQZktWYTNxTmNQUUhNTUg5d0VHdTlxMG9FQnJ2WllsRm1WcVFpU1RUSmtNSnB4c2x1UGh2ejBjVGhxYkxxL2pGTDhOblhVb0pYdDhOVXVNUE0rNnFQbG9qdS9Cc0lOMlBsdUtrVDZGVGxZQ3RQY0s5VDA0ZTIwMzl1ZXdiaFRtR1d2NWpzMWxJMlI5R2pGa21QYlA2R0gyNmQ2VFFsQjZTLzZ4NXp1SVcyeTFncTVTQWpIVmp4bG9FRDVrR2RTcWt6ZHdLbFNRcUlmOG5STDRDZTFLRGFpVXpYb3dGZVBXbFdJaFJoMDFxa0ErbEx6NS9zZitTZjV6RzZITzMrcmc9PS0tOUswM1lwUDNrTmhMTE1CTThWVkpiUT09--d3cc59786a670014181958421272fd80881e1d53; _survey_opossum_session=SnJ3NGNGMW84QjgyWUxwdTVhR3djdE4zOSs4YXJMTkYwMGlVNHBHRW1DOWdITFd3SWtXUmVJRi8vd0NtMmI5cUdDa3BINHU5Sklha0t5Y0pzcU9wU3czOTdmNFl2L2hHVUw5cEhzMy8xc3JRL1dyMTNBWSt6UG45SExEMWhKU1QwRWI2aCs4a1J5ZzFIUWtjQnYvSzZMUlpiTVIxTEN4Z0FEcHlFY25wR1YwPS0tbnB4MFFGWUM3ZWg2S2NjeHZWOVd6UT09--a9672110c028b6568318d4e33a7e7b73f7fec8f5</td></tr><tr><td>rack.request.query_hash</td><td>{}</td></tr><tr><td>rack.request.query_string</td><td></td></tr><tr><td>rack.run_once</td><td>false</td></tr><tr><td>rack.session</td><td>#&lt;ActionDispatch::Request::Session:0x007fcb7f66d990&gt;</td></tr><tr><td>rack.session.options</td><td>#&lt;ActionDispatch::Request::Session::Options:0x007fcb7f66d940&gt;</td></tr><tr><td>rack.url_scheme</td><td>http</td></tr><tr><td>rack.version</td><td>[1, 3]</td></tr></tbody>
+          </table>
+</div>
+            </fieldset>
+            <fieldset id="queries_debug_info" style="display: none">
+              <legend>Queries</legend>
+              <div><table>          <tr>
+            <td>
+              <b id="qtitle_0">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_0')" style="color:#00A;">trace</a>)
+              <p id="qtrace_0" style="display:none;"><a href="txmt://open?url=file:///Users/josh/IronYard/week6/survey_opossum/app/controllers/authors_controller.rb&amp;amp;line=55&amp;amp;column=1">app/controllers/authors_controller.rb:55:in `set_author'</a><br /></p><br />
+            </td>
+            <td>
+              <span id="sql_0">SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1</span>
+            </td>
+            <td><span style='background-color:#ffffff'>Author Load (0.000ms)</span></td>
+          </tr>
+          <tr>
+            <td>
+              <b id="qtitle_1">SELECT</b> (<a href="javascript:Footnotes.toggle('qtrace_1')" style="color:#00A;">trace</a>)
+              <p id="qtrace_1" style="display:none;"><a href="txmt://open?url=file:///Users/josh/IronYard/week6/survey_opossum/app/controllers/application_controller.rb&amp;amp;line=11&amp;amp;column=1">app/controllers/application_controller.rb:11:in `current_author'</a><br /><a href="txmt://open?url=file:///Users/josh/IronYard/week6/survey_opossum/app/views/layouts/application.html.erb&amp;amp;line=15&amp;amp;column=1">app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb__1564031572525190644_70255957843880'</a><br /></p><br />
+            </td>
+            <td>
+              <span id="sql_1">SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1</span>
+            </td>
+            <td><span style='background-color:#ffffff'>Author Load (0.000ms)</span></td>
+          </tr>
+</table></div>
+            </fieldset>
+            <fieldset id="log_debug_info" style="display: none">
+              <legend>Log</legend>
+              <div><table></table></div>
+            </fieldset>
+
+          </div>
+          <script type="text/javascript">
+            var Footnotes = function() {
+
+              function hideAll(){
+                Footnotes.hide(document.getElementById('partials_debug_info'));
+Footnotes.hide(document.getElementById('stylesheets_debug_info'));
+Footnotes.hide(document.getElementById('javascripts_debug_info'));
+Footnotes.hide(document.getElementById('assigns_debug_info'));
+Footnotes.hide(document.getElementById('session_debug_info'));
+Footnotes.hide(document.getElementById('cookies_debug_info'));
+Footnotes.hide(document.getElementById('params_debug_info'));
+Footnotes.hide(document.getElementById('filters_debug_info'));
+Footnotes.hide(document.getElementById('routes_debug_info'));
+Footnotes.hide(document.getElementById('env_debug_info'));
+Footnotes.hide(document.getElementById('queries_debug_info'));
+Footnotes.hide(document.getElementById('log_debug_info'));
+
+              }
+
+              function hideAllAndToggle(id) {
+                var n = note(id);
+                var display = n.style.display;
+                hideAll();
+                // Restore original display to allow toggling
+                n.style.display = display;
+                toggle(id)
+
+                location.href = '#footnotes_debug';
+              }
+
+              function note(id) {
+                return (document.getElementById(id));
+              }
+
+              function toggle(id){
+                var el = note(id);
+                if (el.style.display == 'none') {
+                  Footnotes.show(el);
+                } else {
+                  Footnotes.hide(el);
+                }
+              }
+
+              function show(element) {
+                element.style.display = 'block'
+              }
+
+              function hide(element) {
+                element.style.display = 'none'
+              }
+
+              return {
+                show: show,
+                hide: hide,
+                toggle: toggle,
+                hideAllAndToggle: hideAllAndToggle
+              }
+            }();
+            /* Additional Javascript */
+            
+          </script>
+        </div>
+        <!-- End Footnotes -->
+</body>
+</html>
