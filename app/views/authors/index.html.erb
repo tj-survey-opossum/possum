@@ -17,7 +17,7 @@
       <tr>
         <td><%= author.name %></td>
         <td><%= author.email %></td>
-        <td><%= author.password_digest %></td>
+        <td><%= author.password %></td>
         <td><%= link_to 'Show', author %></td>
         <td><%= link_to 'Edit', edit_author_path(author) %></td>
         <td><%= link_to 'Destroy', author, method: :delete, data: { confirm: 'Are you sure?' } %></td>
