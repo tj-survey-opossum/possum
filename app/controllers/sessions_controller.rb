@@ -17,4 +17,11 @@ class SessionsController < ApplicationController
     session[:author_id] = nil
     redirect_to login_path
   end
+
+private
+
+  def author_params
+    params.require(:author).permit(:name, :email, :password)
+  end
+
 end
