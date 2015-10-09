@@ -1,10 +1,11 @@
 class SurveysController < ApplicationController
   before_action :set_survey, only: [:show, :edit, :update, :destroy]
-
+  before_action :require_login
 
   # GET /surveys
   def index
-    @surveys = Survey.find(params[:id]).author == current_author
+    @surveys = Survey.all
+    # @surveys = Survey.find(params[:id]).author == current_author
   end
 
   # GET /surveys/1

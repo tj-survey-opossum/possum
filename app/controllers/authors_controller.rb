@@ -1,6 +1,7 @@
 class AuthorsController < ApplicationController
   before_action :set_author, only: [:dashboard, :show, :edit, :update, :destroy]
-
+  before_action :require_login
+  
   #GET /
   def  dashboard
 
