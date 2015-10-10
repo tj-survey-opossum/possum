@@ -7,4 +7,8 @@ class Survey < ActiveRecord::Base
   def number_of_questions
     questions.count
   end
+
+  def valid
+    !questions.first.prompt.blank?
+  end
 end

@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     a = Author.find_by_email(params[:email])
     if a && a.authenticate(params[:password])
       session[:author_id] = a.id
-      redirect_to surveys_path, notice: "Logged in!"
+      redirect_to dashboard_author_url(a), notice: "Logged in!"
     else
       redirect_to login_path, warning: "Login failed. Invalid email/password."
     end
