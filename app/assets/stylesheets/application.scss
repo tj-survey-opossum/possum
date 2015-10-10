@@ -16,6 +16,13 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+
 //Variables
 $nuclear-leakage: #ddfb35;
 
@@ -36,9 +43,14 @@ $nuclear-leakage: #ddfb35;
  }
 }
 
+nav ul li {
+  float: right;
+  vertical-align: bottom;
+}
+
 //Author Dashboard
 
-#survey-title{
+#survey-title {
   display: inline-block;
 }
 
@@ -54,13 +66,21 @@ html {
 }
 
 body {
-  padding-left: 1%;
+  padding-left: 8%;
 	padding-top: 60px;
   background-color: $nuclear-leakage;
 }
 
 input[type="text"]{
- width: 15%;
+ width: 30%;
+}
+
+input[type="submit"]{
+ width: 30%;
+}
+
+input[type="password"]{
+ width: 30%;
 }
 
 section {
@@ -78,6 +98,16 @@ textarea {
 	}
 }
 
-.bottom-links{
+.bottom-links {
   padding-top: 2%;
+}
+
+
+//Forms
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
 }

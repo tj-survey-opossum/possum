@@ -1,12 +1,11 @@
 class SurveysController < ApplicationController
   before_action :set_survey, only: [:show, :edit, :update, :destroy]
   before_action :require_login
-  before_action :survey_owner, only: [:edit, :update, :destroy]
+  before_action :set_survey_owner, only: [:edit, :update, :destroy]
 
   # GET /surveys
   def index
     @surveys = Survey.all
-    # @surveys = Survey.find(params[:id]).author == current_author
   end
 
   # GET /surveys/1
@@ -78,14 +77,10 @@ class SurveysController < ApplicationController
                     questions_attributes: [:id, :question_type, :prompt, :_destroy])
     end
 
-    def survey_owner
+    def set_survey_owner
       unless @survey.author_id == session[:author_id]
       flash[:notice] = 'These are not the surveys you are looking for.'
       redirect_to jobs_path
     end
-
-    # def require_permission
-    #   redirect_to authors_path unless current_author == Survey.find(params[:id]).author
-    # end
-
+  end
 end

@@ -1,32 +1,12 @@
 <header class="navbar-fixed-top navbar-inverse">
 	<div class="container">
-		<%= link_to "Gradebook", root_path, id: "logo" %>
+		<%= link_to "Survey Opossum", login_path, id: "logo" %>
 		<nav>
 			<ul class="nav navbar-nav navbar-right">
-				<li> <%= link_to "Home", root_path %> </li>
-				<div id="container">
-					<div id="author_header">
-						<% if current_author %>
-							Logged in as <%= current_author.email %>.
-							<%= link_to "Log out", logout_path %>
-						<% end %>
-					</div>
-				</div>
-
-				<% if session[:account_type] %>
-					<% if @logged_in_teacher %>
-							<li> <%= link_to "Edit Information", edit_teacher_path(@logged_in_teacher) %>
-					<% end %>
-					<% if @logged_in_parent %>
-							<li> <%= link_to "Change Password", edit_parent_path(@logged_in_parent) %>
-					<% end %>
-					<% if @logged_in_student %>
-							<li> <%= link_to "Change Password", edit_student_path(@logged_in_student) %>
-					<% end %>
-					<li> <%= link_to "View Grades", grades_path %></li>
-					<li> <%= link_to "Log out", logout_path, method: :delete %></li>
-				<% else %>
-					<li> <%= link_to "Log in", login_path %> </li>
+				<li> <%= link_to "Home", login_path %> </li>
+				<% if current_author %>
+					<li><a> Logged in as <%= current_author.email %>. </a></li>
+					<li> <%= link_to "Log out", logout_path %> </li>
 				<% end %>
 			</ul>
 		</nav>
