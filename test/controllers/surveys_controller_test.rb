@@ -20,7 +20,8 @@ class SurveysControllerTest < ActionController::TestCase
 
   # test "should create survey" do
   #   assert_difference('Survey.count') do
-  #     post :create, survey: { author_id: @survey.author_id, description: @survey.description, published: @survey.published, title: @survey.title }
+  #     post :create, survey: { author_id: @survey.author_id, description: @survey.description, published: @survey.published, title: @survey.title,
+  #                               }
   #   end
   #
   #   assert_redirected_to survey_path(assigns(:survey))
