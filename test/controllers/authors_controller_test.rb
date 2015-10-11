@@ -1,15 +1,15 @@
 require 'test_helper'
 
 class AuthorsControllerTest < ActionController::TestCase
-  # setup do
-  #   @author = authors(:one)
-  # end
-  #
-  # test "should get index" do
-  #   get :index
-  #   assert_response :success
-  #   assert_not_nil assigns(:authors)
-  # end
+  setup do
+    @author = authors(:one)
+  end
+
+  test "should get index" do
+    get :index
+    assert_response :success
+    assert_not_nil assigns(:authors)
+  end
   #
   # test "should get new" do
   #   get :new
