@@ -15,12 +15,22 @@
 
   <%= f.fields_for :replies do |ff| %>
     <% @survey.questions.each do |question| %>
-      <% #ff.question_id = question.id %>
+      <% ff.question_id = question.id %>
       <div><%= ff.text_field :question_id %></div>
       <span class="prompt"> <%= question.prompt %>:  </span>
       <div class="subfield">
-        <%= ff.label :question_reply %>:
-        <%= ff.text_field :question_reply %>
+        <%= ff.label :question_reply, 'Reply' %>:
+        <% case question.question_type %>
+        <% when "Yes/No" %>
+        <%= ff.radio_button :question_reply, 'Yes' %>
+        <%= label :question_reply, 'Yes' %>
+        <%= ff.radio_button :question_reply, 'No' %>
+        <%= label :question_reply, 'No' %>
+        <% when "Short Answer" %>
+          <%= ff.text_field :question_reply %>
+        <% when "Long Answer" %>
+          <%= ff.text_area :question_reply %>
+        <% end %>
       </div>
     <% end %>
   <% end %>
