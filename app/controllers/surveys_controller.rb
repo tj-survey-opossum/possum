@@ -1,5 +1,5 @@
 class SurveysController < ApplicationController
-  before_action :set_survey, only: [:show, :edit, :update, :destroy]
+  before_action :set_survey, only: [:show, :edit, :update, :destroy, :publish]
   before_action :require_login
   before_action :set_survey_owner, only: [:edit, :update, :destroy]
 
@@ -50,10 +50,11 @@ class SurveysController < ApplicationController
   end
 
   def publish
-    if survey.questions.empty?
+    if @survey.questions.empty?
       redirect_to dashboard_author_url(@survey.author_id), alert: "Survey must have questions to be published."
     else
       @survey.published = true
+      @survey.save
       redirect_to dashboard_author_url(@survey.author_id), notice: "Survey was successfully published."
     end
   end
@@ -77,7 +78,7 @@ class SurveysController < ApplicationController
     # Only allow a trusted parameter "white list" through.
     def survey_params
       params.require(:survey).permit(:author_id, :title, :description, :published,
-                    questions_attributes: [:id, :question_type, :prompt, :_destroy])
+                    questions_attributes: [:id, :question_type, :prompt, :_destroy, :required_question])
     end
 
     def set_survey_owner

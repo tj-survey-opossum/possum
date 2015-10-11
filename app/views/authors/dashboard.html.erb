@@ -8,11 +8,12 @@
       <h3 id="survey-title"><%= survey.title %></h3>
       <span id="survey-display-links">
         <% unless survey.published %>
-          <%= link_to 'Publish', publish_survey_path(survey) %> |
+          <%= link_to 'Publish', publish_survey_path(survey), method: :post %> |
         <% end %>
         <%= link_to 'Delete this survey', survey_path(survey), method: :delete, data: { confirm: 'Are you sure?' } %> |
         <%= link_to 'Edit this survey', edit_survey_path(survey) %>
         <% if survey.published %>
+          <%= link_to 'Share this link to let others take your survey', new_submission_path(survey)%> |
           <%= link_to 'View replies to this survey', survey_path(survey) %>
         <% end %>
       </span>

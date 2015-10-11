@@ -11,26 +11,20 @@
     </div>
   <% end %>
 
-  <%= f.hidden_field :id %>
+  <%= f.hidden_field :survey_id %>
 
-  <div class="field">
-    <%= f.label :survey_id %><br>
-    <%= f.number_field :survey_id %>
-  </div>
-
-  <h1> Replies </h1>
-
-  <%= @questions.each do |q| %>
-    <%= @question.prompt %>
-    <%= f.fields_for :replies do |ff| %>
-      <div>
-        <span class="subfield">
-          <%= ff.label :question_reply %>:
-          <%= ff.text_field :question_reply %>
-        </span>
+  <%= f.fields_for :replies do |ff| %>
+    <% @survey.questions.each do |question| %>
+      <% #ff.question_id = question.id %>
+      <div><%= ff.text_field :question_id %></div>
+      <span class="prompt"> <%= question.prompt %>:  </span>
+      <div class="subfield">
+        <%= ff.label :question_reply %>:
+        <%= ff.text_field :question_reply %>
       </div>
     <% end %>
   <% end %>
+
 
   <div class="actions">
     <%= f.submit %>

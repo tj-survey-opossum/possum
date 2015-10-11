@@ -1,7 +1,7 @@
 class SubmissionsController < ApplicationController
   before_action :set_submission, only: [:show, :edit, :update, :destroy]
   before_action :require_login
-  before_action :check_published, only: [:new]
+  #before_action :check_published, only: [:new]
 
   # GET /submissions
   def index
@@ -15,7 +15,9 @@ class SubmissionsController < ApplicationController
   # GET /submissions/new
   def new
     @submission = Submission.new
-    @questions = Survey.question.all
+    @survey = Survey.find(params[:format])
+    @submission.survey = @survey
+    @submission.replies.build
   end
 
   # GET /submissions/1/edit
