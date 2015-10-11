@@ -5,4 +5,5 @@ class Question < ActiveRecord::Base
   def self.type_names
     ["Yes/No", "Short Answer", "Long Answer"]
   end
+
 end

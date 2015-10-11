@@ -34,7 +34,13 @@
       <span class="subfield">
         <%= ff.label :prompt %>:
         <%= ff.text_field :prompt %>
-      <span>
+      </span>
+      <div>
+        <span class="subfield">
+          <%= ff.label :required_question %>? Yes/No
+          <%= ff.check_box :required %>
+        </span>
+      </div>
     </div>
   <% end %>
   <div class="actions">

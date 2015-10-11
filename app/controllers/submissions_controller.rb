@@ -14,6 +14,7 @@ class SubmissionsController < ApplicationController
   # GET /submissions/new
   def new
     @submission = Submission.new
+    @questions = Survey.question.all
   end
 
   # GET /submissions/1/edit

@@ -11,10 +11,28 @@
     </div>
   <% end %>
 
+  <%= f.hidden_field :id %>
+
   <div class="field">
     <%= f.label :survey_id %><br>
     <%= f.number_field :survey_id %>
   </div>
+
+  <h1> Replies </h1>
+
+  <%= @questions.each do |q| %>
+  <%= @question.prompt %>
+    <%= f.fields_for :replies do |ff| %>
+      <div>
+        <span class="subfield">
+          <%= ff.label :question_reply %>:
+          <%= ff.text_field :question_reply %>
+        </span>
+      </div>
+    <% end %>
+
+  <% end %>
+
   <div class="actions">
     <%= f.submit %>
   </div>
