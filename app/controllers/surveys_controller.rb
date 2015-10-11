@@ -30,10 +30,12 @@ class SurveysController < ApplicationController
   def create
     @survey = Survey.new(survey_params)
 
-    if @survey.save
-      redirect_to dashboard_author_url(@survey.author_id), notice: 'Survey was successfully created.'
+    if @survey.valid
+      if @survey.save
+        redirect_to dashboard_author_url(@survey.author_id), notice: 'Survey was successfully created.'
+      end
     else
-      render :new
+      redirect_to new_survey_path(format: @survey.author_id), alert: "You must enter a question to create a survey."
     end
   end
 
@@ -79,8 +81,8 @@ class SurveysController < ApplicationController
 
     def set_survey_owner
       unless @survey.author_id == session[:author_id]
-      flash[:notice] = 'These are not the surveys you are looking for.'
-      redirect_to jobs_path
+        flash[:notice] = 'These are not the surveys you are looking for.'
+        redirect_to dashboard_author_url(@survey.author_id)
+      end
     end
-  end
 end
