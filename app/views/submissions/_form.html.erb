@@ -21,7 +21,7 @@
   <h1> Replies </h1>
 
   <%= @questions.each do |q| %>
-  <%= @question.prompt %>
+    <%= @question.prompt %>
     <%= f.fields_for :replies do |ff| %>
       <div>
         <span class="subfield">
@@ -30,7 +30,6 @@
         </span>
       </div>
     <% end %>
-
   <% end %>
 
   <div class="actions">
