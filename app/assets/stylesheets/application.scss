@@ -46,12 +46,15 @@ $nuclear-leakage: #ddfb35;
 }
 
 .navbar-inverse{
-  background-color: #C5C4FF;
+  background-color: #30A6C1;
 }
 
 nav ul li {
   float: right;
   vertical-align: bottom;
+}
+#lia {
+  color: black;
 }
 
 //Author Dashboard
@@ -117,6 +120,12 @@ textarea {
   -webkit-box-shadow: 1px 3px 9px 7px #F51775;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
   -moz-box-shadow:    1px 3px 9px 7px #F51775;  /* Firefox 3.5 - 3.6 */
   box-shadow:         1px 3px 9px 7px #F51775;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+#credits{
+  float: right;
+  font-size: .75em;
+  padding-right: 3%;
 }
 
 //Forms
