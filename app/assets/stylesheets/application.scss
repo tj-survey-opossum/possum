@@ -36,12 +36,17 @@ $nuclear-leakage: #ddfb35;
  letter-spacing: -1px;
  padding-top: 9px;
  font-weight: bold;
- box-shadow: 2px solid pink;
+ color: #F51775;
+
 
  &:hover{
  	color: #fff;
  text-decoration: none;
  }
+}
+
+.navbar-inverse{
+  background-color: #C5C4FF;
 }
 
 nav ul li {
@@ -109,9 +114,9 @@ textarea {
 }
 
 .shadow {
-  -webkit-box-shadow: 1px 3px 9px 7px #9bb025;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-  -moz-box-shadow:    1px 3px 9px 7px #9bb025;  /* Firefox 3.5 - 3.6 */
-  box-shadow:         1px 3px 9px 7px #9bb025;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+  -webkit-box-shadow: 1px 3px 9px 7px #F51775;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    1px 3px 9px 7px #F51775;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         1px 3px 9px 7px #F51775;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
 
 //Forms
@@ -121,4 +126,8 @@ input, textarea, select, .uneditable-input {
   width: 100%;
   margin-bottom: 15px;
   @include box_sizing;
+}
+
+.login{
+  color: #000080;
 }
