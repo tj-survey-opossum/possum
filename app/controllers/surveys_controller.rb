@@ -82,7 +82,7 @@ class SurveysController < ApplicationController
     def set_survey_owner
       unless @survey.author_id == session[:author_id]
         flash[:notice] = 'These are not the surveys you are looking for.'
-        redirect_to jobs_path
+        redirect_to dashboard_author_url(@survey.author_id)
       end
     end
 end
