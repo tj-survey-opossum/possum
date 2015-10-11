@@ -12,6 +12,9 @@
         <% end %>
         <%= link_to 'Delete this survey', survey_path(survey), method: :delete, data: { confirm: 'Are you sure?' } %> |
         <%= link_to 'Edit this survey', edit_survey_path(survey) %>
+        <% if survey.published %>
+          <%= link_to 'View replies to this survey', survey_path(survey) %>
+        <% end %>
       </span>
 
       <div class="row">

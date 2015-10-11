@@ -2,7 +2,7 @@
 
 <p>
   <strong>Author:</strong>
-  <%= @survey.author_id %>
+  <%= @survey.author.name %>
 </p>
 
 <p>
@@ -14,11 +14,23 @@
   <strong>Description:</strong>
   <%= @survey.description %>
 </p>
+<% @survey.questions.each do |question| %>
 
-<p>
-  <strong>Published:</strong>
-  <%= @survey.published %>
-</p>
+  <p>
+    <strong>Question:</strong>
+    <%= question.prompt %>
+  </p>
+
+  <% unless @replies.empty? %>
+    <% @replies.each do |reply| %>
+      <p>
+        <% if reply.question_id == question.id %>
+          <%= reply.question_reply %>
+        <% end %>
+      </p>
+    <% end %>
+  <% end %>
+<% end %>
 
 <%= link_to 'Edit', edit_survey_path(@survey) %> |
 <%= link_to 'Back', surveys_path %>

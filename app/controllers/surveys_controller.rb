@@ -10,6 +10,7 @@ class SurveysController < ApplicationController
 
   # GET /surveys/1
   def show
+    @replies = Reply.all
   end
 
   # GET /surveys/new
