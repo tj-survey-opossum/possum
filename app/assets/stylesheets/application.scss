@@ -103,6 +103,16 @@ textarea {
   padding-top: 2%;
 }
 
+.possum-image {
+  width: 30%;
+  border-radius: 5px;
+}
+
+.shadow {
+  -webkit-box-shadow: 1px 3px 9px 7px #9bb025;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    1px 3px 9px 7px #9bb025;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         1px 3px 9px 7px #9bb025;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
 
 //Forms
 input, textarea, select, .uneditable-input {
