@@ -20,18 +20,18 @@ class SurveysControllerTest < ActionController::TestCase
 
   # test "should create survey" do
   #   assert_difference('Survey.count') do
-  #     post :create, survey: { author_id: @survey.author_id, description: @survey.description, published: @survey.published, title: @survey.title,
-  #                               }
+  #     post :create, survey: { author_id: @survey.author_id, description: @survey.description, published: @survey.published, title: @survey.title},
+  #                             questions_attributes: {question_type: "Yes/No", prompt: "Who?"}
   #   end
   #
-  #   assert_redirected_to survey_path(assigns(:survey))
+  #   assert_redirected_to dashboard_author_url(assigns: :survey.author_id)
   # end
 
-  # test "should show survey" do
-  #   get :show, id: @survey
-  #   assert_response :success
-  # end
-  #
+  test "should show survey" do
+    get :show, id: @survey
+    assert_response :success
+  end
+
   # test "should get edit" do
   #   get :edit, id: @survey
   #   assert_response :success
