@@ -4,7 +4,7 @@
 
 <% @author.surveys.each do |survey| %>
   <div class="row">
-    <div class="col-md-6 col-md-offset-1 survey-display">
+    <div class="col-md-8 col-md-offset-1 survey-display">
       <h3 id="survey-title"><%= survey.title %></h3>
       <span id="survey-display-links">
         <% unless survey.published %>
@@ -13,13 +13,13 @@
         <%= link_to 'Delete this survey', survey_path(survey), method: :delete, data: { confirm: 'Are you sure?' } %> |
         <%= link_to 'Edit this survey', edit_survey_path(survey) %>
         <% if survey.published %>
-          <%= link_to 'Share this link to let others take your survey', new_submission_path(survey)%> |
+          | <%= link_to 'Share this link to let others take your survey', new_submission_path(survey)%> |
           <%= link_to 'View replies to this survey', survey_path(survey) %>
         <% end %>
       </span>
 
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-2">
           <div id="survey-description"><%= survey.description %></div>
           <div id="number-questions"><%= survey.number_of_questions %> Questions</div>
         </div>
