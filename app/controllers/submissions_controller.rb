@@ -14,7 +14,8 @@ class SubmissionsController < ApplicationController
   # GET /submissions/new
   def new
     @submission = Submission.new
-    @questions = Survey.question.all
+    @survey = Survey.find(params[:survey_id])
+    @submission.survey = @survey
   end
 
   # GET /submissions/1/edit
