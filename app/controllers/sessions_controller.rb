@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-
+  before_action :direct_to_dashboard, only: [:new]
 
   def new
 
@@ -20,4 +20,11 @@ class SessionsController < ApplicationController
     flash[:notice] = "You have successfully logged out."
     redirect_to login_path
   end
+end
+
+
+private
+
+def direct_to_dashboard
+    redirect_to dashboard_author_url(session[:author_id]) if current_author
 end

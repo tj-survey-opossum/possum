@@ -10,7 +10,7 @@ class Survey < ActiveRecord::Base
   end
 
   def valid
-    !questions.first.prompt.blank?
+    !(questions.first.prompt.blank? || title.blank?)
   end
 
 end
