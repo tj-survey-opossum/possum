@@ -13,7 +13,7 @@ class SubmissionsControllerTest < ActionController::TestCase
   end
 
   test "should get new" do
-    get :new
+    get :new, format: surveys(:one).id
     assert_response :success
   end
 

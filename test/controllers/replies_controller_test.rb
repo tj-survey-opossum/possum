@@ -4,13 +4,6 @@ class RepliesControllerTest < ActionController::TestCase
   setup do
     @reply = replies(:one)
     session[:author_id] = authors(:one).id
-
-  end
-
-  test "should get index" do
-    get :index
-    assert_response :success
-    assert_not_nil assigns(:replies)
   end
 
   test "should get new" do

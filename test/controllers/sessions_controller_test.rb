@@ -2,7 +2,6 @@ require 'test_helper'
 
 class SessionsControllerTest < ActionDispatch::IntegrationTest
 
-<<<<<<< HEAD
   test "should get create" do
     get :create
     assert_redirected_to login_path
@@ -12,9 +11,6 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
     get :destroy
     assert_redirected_to login_path
   end
-=======
-
->>>>>>> submission-form
 
   # test "login" do
   #   get login_path

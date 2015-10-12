@@ -4,6 +4,7 @@ class SurveysControllerTest < ActionController::TestCase
   setup do
     @survey = surveys(:one)
     @author = authors(:one)
+    @survey.author = @author
     session[:author_id] = authors(:one).id
   end
 
@@ -26,12 +27,7 @@ class SurveysControllerTest < ActionController::TestCase
   #
   #   assert_redirected_to dashboard_author_url(assigns: :survey.author_id)
   # end
-
-  test "should show survey" do
-    get :show, id: @survey
-    assert_response :success
-  end
-
+  # 
   # test "should get edit" do
   #   get :edit, id: @survey
   #   assert_response :success

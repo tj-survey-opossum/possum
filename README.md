@@ -6,6 +6,9 @@ Meet your new furry survey software.
 
 Survey opossum makes building and deploying surveys easy. Users have the ability to customize survey questions, question types, and response types with ease. And survey data are seamlessly aggregated for quick analysis.
 
+## ERD
+https://www.lucidchart.com/documents/view/1bccd2eb-e124-436d-9e47-ee0291ea5cd6
+
 ## New Features
 * Authors can create, edit, delete, and publish surveys
 * Links to published surveys are now available at the author dashboard
