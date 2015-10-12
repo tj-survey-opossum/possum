@@ -1,6 +1,7 @@
 class SubmissionsController < ApplicationController
   before_action :set_submission, only: [:show, :edit, :update, :destroy]
   before_action :require_login
+  # before_action :check_published, only: [:new]
 
   # GET /submissions
   def index
@@ -14,6 +15,9 @@ class SubmissionsController < ApplicationController
   # GET /submissions/new
   def new
     @submission = Submission.new
+    @survey = Survey.find(params[:format])
+    @submission.survey = @survey
+    @submission.replies.build
   end
 
   # GET /submissions/1/edit
@@ -54,6 +58,14 @@ class SubmissionsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def submission_params
-      params.require(:submission).permit(:survey_id)
+      params.require(:submission).permit(:survey_id,
+                    replies_attributes: [:question_id, :question_reply, :submission_id])
+    end
+
+    def check_published
+      if Survey.exists?(params[:survey_id])
+        Survey.find(params[:survey_id]).published ? (return 1) : ()
+      end
+      redirect_to dashboard_author_path(session[:author_id])
     end
 end

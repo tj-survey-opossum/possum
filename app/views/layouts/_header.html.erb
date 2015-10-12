@@ -1,0 +1,14 @@
+<header class="navbar-fixed-top navbar-inverse">
+	<div class="container">
+		<%= link_to "Survey Opossum", login_path, id: "logo" %>
+		<nav>
+			<ul class="nav navbar-nav navbar-right">
+					<li> <%= link_to "Home", login_path, id: "lia" %> </li>
+					<% if current_author %>
+						<li><a id="lia"> Logged in as <%= current_author.email %>.</a> </li>
+						<li> <%= link_to "Log out", logout_path, id: "lia" %> </li>
+					<% end %>
+			</ul>
+		</nav>
+	</div>
+</header>

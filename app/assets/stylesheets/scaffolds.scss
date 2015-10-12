@@ -41,18 +41,19 @@ div {
   color: green;
 }
 
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
 .warning {
   color: red;
 }
 
 .alert {
   color: red;
-}
-
-.field_with_errors {
-  padding: 2px;
-  background-color: red;
-  display: table;
 }
 
 #error_explanation {
@@ -77,5 +78,6 @@ div {
   ul li {
     font-size: 12px;
     list-style: square;
+    vertical-align: bottom;
   }
 }

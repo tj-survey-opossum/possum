@@ -1,0 +1,147 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+
+//Variables
+$nuclear-leakage: #ddfb35;
+
+//Navbar
+#logo {
+ float: left;
+ margin-right: 10px;
+ font-size: 1.7em;
+ color: #fff;
+ text-transform: uppercase;
+ letter-spacing: -1px;
+ padding-top: 9px;
+ font-weight: bold;
+ color: #F51775;
+
+
+ &:hover{
+ 	color: #fff;
+ text-decoration: none;
+ }
+}
+
+.navbar-inverse{
+  background-color: #30A6C1;
+}
+
+nav ul li {
+  float: right;
+  vertical-align: bottom;
+}
+#lia {
+  color: black;
+}
+
+//Author Dashboard
+
+.survey-title {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+#survey-display-links{
+  display: inline;
+  padding-right: 10%;
+}
+
+//Universal
+html {
+	overflow-y: scroll;
+}
+
+body {
+  padding-left: 8%;
+	padding-top: 60px;
+  background-color: $nuclear-leakage;
+}
+
+input[type="text"]{
+ width: 30%;
+}
+
+input[type="submit"]{
+ width: 30%;
+}
+
+input[type="password"]{
+ width: 30%;
+}
+
+section {
+	overflow: auto;
+}
+
+textarea {
+	resize: vertical;
+}
+
+.center {
+	text-align: center;
+	h1 {
+	margin-bottom: 60px;
+	}
+}
+
+.bottom-links {
+  padding-top: 2%;
+}
+
+.possum-image {
+  width: 30%;
+  border-radius: 5px;
+}
+
+.shadow {
+  -webkit-box-shadow: 1px 3px 9px 7px #F51775;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    1px 3px 9px 7px #F51775;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         1px 3px 9px 7px #F51775;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+#credits{
+  float: right;
+  font-size: .75em;
+  padding-right: 3%;
+}
+
+//Forms
+// input, textarea, select, .uneditable-input {
+//   border: 1px solid #bbb;
+//   border-radius: 4px;
+//   width: 100%;
+//   margin-bottom: 15px;
+//   @include box_sizing;
+// }
+
+.prompt{
+  font-weight: bold;
+}
+
+.login{
+  color: #000080;
+}

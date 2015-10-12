@@ -3,6 +3,7 @@ require 'test_helper'
 class SubmissionsControllerTest < ActionController::TestCase
   setup do
     @submission = submissions(:one)
+    session[:author_id] = authors(:one).id
   end
 
   test "should get index" do

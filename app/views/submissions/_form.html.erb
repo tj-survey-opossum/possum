@@ -11,10 +11,31 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :survey_id %><br>
-    <%= f.number_field :survey_id %>
-  </div>
+  <%= f.hidden_field :survey_id %>
+
+  <%= f.fields_for :replies do |ff| %>
+    <% @survey.questions.each do |question| %>
+      <% #ff.question_id = question.id %>
+      <div><%= ff.hidden_field :question_id, value: question.id %></div>
+      <span class="prompt"> <%= question.prompt %>:  </span>
+      <div class="subfield">
+        <%= ff.label :question_reply, 'Reply' %>:
+        <% case question.question_type %>
+        <% when "Yes/No" %>
+        <%= ff.radio_button :question_reply, 'Yes' %>
+        <%= label :question_reply, 'Yes' %>
+        <%= ff.radio_button :question_reply, 'No' %>
+        <%= label :question_reply, 'No' %>
+        <% when "Short Answer" %>
+          <%= ff.text_field :question_reply %>
+        <% when "Long Answer" %>
+          <%= ff.text_area :question_reply %>
+        <% end %>
+      </div>
+    <% end %>
+  <% end %>
+
+
   <div class="actions">
     <%= f.submit %>
   </div>

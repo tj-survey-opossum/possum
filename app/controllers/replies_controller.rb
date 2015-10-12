@@ -4,7 +4,6 @@ class RepliesController < ApplicationController
 
   # GET /replies
   def index
-    @replies = Reply.all
   end
 
   # GET /replies/1
