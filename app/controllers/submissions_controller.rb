@@ -58,7 +58,8 @@ class SubmissionsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def submission_params
-      params.require(:submission).permit(:survey_id)
+      params.require(:submission).permit(:survey_id,
+                    replies_attributes: [:question_id, :question_reply, :submission_id])
     end
 
     def check_published
